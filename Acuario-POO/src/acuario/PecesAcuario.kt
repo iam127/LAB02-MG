@@ -5,12 +5,25 @@ abstract class Pez {
     abstract val color: String
 }
 
-// Clase Tiburón que hereda de Pez
-class Tiburon : Pez() {
-    override val color: String = "gris"
+// Interfaz AccionPez
+interface AccionPez {
+    fun comer()
 }
 
-// Clase PezPayaso que hereda de Pez
-class PezPayaso : Pez() {
+// Clase Tiburón que hereda de Pez e implementa AccionPez
+class Tiburon : Pez(), AccionPez {
+    override val color: String = "gris"
+
+    override fun comer() {
+        println("cazar y comer peces")
+    }
+}
+
+// Clase PezPayaso que hereda de Pez e implementa AccionPez
+class PezPayaso : Pez(), AccionPez {
     override val color: String = "dorado"
+
+    override fun comer() {
+        println("comer algas")
+    }
 }

@@ -65,6 +65,13 @@ fun crearPeces() {
     // Imprimir el color de cada uno
     println("Color del tiburón: ${tiburon.color}")
     println("Color del pez payaso: ${pezPayaso.color}")
+
+    // Llamar al método comer() para ambos peces
+    print("El tiburón va a: ")
+    tiburon.comer()
+
+    print("El pez payaso va a: ")
+    pezPayaso.comer()
 }
 
 fun main() {
